@@ -8,7 +8,7 @@ public class LinkedList<T> : IEnumerable<T>
 
     private Node Tail { get; set; }
 
-    private List<Node> List { get; set; }
+    //private List<Node> List { get; set; }
 
     public int Count { get; private set; }
 
