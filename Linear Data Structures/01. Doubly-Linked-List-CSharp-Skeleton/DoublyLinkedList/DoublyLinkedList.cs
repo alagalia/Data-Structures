@@ -71,14 +71,15 @@ public class DoublyLinkedList<T> : IEnumerable<T>
             throw new InvalidOperationException();
         }
         var value = this.Tail.Value;
-        if (this.Head == this.Tail)
+
+        this.Tail = this.Tail.PrevNode;
+        if (this.Tail == null)
         {
-            this.Head = this.Tail = null;
+            this.Head = null;
         }
         else
         {
-            var prevNode = this.Tail.PrevNode;
-            this.Tail = prevNode;
+           this.Tail.NextNode= null;
         }
         this.Count--;
         return value;
@@ -96,32 +97,47 @@ public class DoublyLinkedList<T> : IEnumerable<T>
 
     public IEnumerator<T> GetEnumerator()
     {
-        throw new NotImplementedException();
+        var currentNode = this.Head;
+        while(currentNode != null)
+        {
+            yield return currentNode.Value;
+            currentNode = currentNode.NextNode;
+        }
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        throw new NotImplementedException();
+        return GetEnumerator();
     }
 
     public T[] ToArray()
     {
-        throw new NotImplementedException();
-    }
-
-    private class ListNode<T>
-    {
-        public T Value { get; private set; }
-        public ListNode<T> PrevNode { get; set; }
-        public ListNode<T> NextNode { get; set; }
-
-        public ListNode(T value)
+        T[] list = new T[Count];
+        int i = 0;
+        var currentNode = this.Head;
+        while (currentNode != null)
         {
-            this.Value = value;
+            list[i] = currentNode.Value;
+            i++;
+            currentNode = currentNode.NextNode;
         }
+        return list;
     }
+
+    
 }
 
+ class ListNode<T>
+{
+    public T Value { get; private set; }
+    public ListNode<T> PrevNode { get; set; }
+    public ListNode<T> NextNode { get; set; }
+
+    public ListNode(T value)
+    {
+        this.Value = value;
+    }
+}
 
 class Example
 {
