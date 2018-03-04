@@ -1,6 +1,0 @@
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\bin\Debug\DoublyLinkedList.exe
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\bin\Debug\DoublyLinkedList.pdb
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\obj\Debug\DoublyLinkedList.csprojResolveAssemblyReference.cache
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\obj\Debug\DoublyLinkedList.csproj.CoreCompileInputs.cache
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\obj\Debug\DoublyLinkedList.exe
-D:\SOFTUNI-C#\Data Structures\Linear Data Structures\01. Doubly-Linked-List-CSharp-Skeleton\DoublyLinkedList\obj\Debug\DoublyLinkedList.pdb
